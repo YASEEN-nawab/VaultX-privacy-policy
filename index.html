@@ -7,160 +7,286 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..200" rel="stylesheet" />
 </head>
 <body>
-    <div class="theme-toggle">
-        <button id="theme-switch" aria-label="Toggle dark mode">
-            <span class="material-icons">dark_mode</span>
-        </button>
-    </div>
-
     <div class="app-container">
-        <div class="gradient-background"></div>
+        <div class="animated-gradient-background">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+            <div class="gradient-blob blob-3"></div>
+        </div>
         
-        <header class="app-bar">
-            <button class="back-button" aria-label="Go back">
-                <span class="material-icons">arrow_back_ios</span>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                <span class="material-symbols-rounded" id="theme-icon">dark_mode</span>
+                <span class="tooltip">Toggle theme</span>
             </button>
-            <h1>Privacy Policy</h1>
+        </div>
+
+        <header class="glassmorphism-header">
+            <div class="back-button" id="back-button">
+                <span class="material-symbols-rounded">arrow_back_ios</span>
+                <span class="back-text">Back</span>
+            </div>
+            <div class="header-title">Privacy Policy</div>
         </header>
 
-        <main class="content">
-            <div class="policy-header">
-                <h2>Privacy Policy</h2>
-                <p class="last-updated">Last Updated: May 13, 2025</p>
-            </div>
-
-            <div class="policy-section">
-                <h3>1. Introduction</h3>
-                <div class="policy-content">
-                    <p>VaultX is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your data when you use our application.</p>
+        <div class="content-layout">
+            <!-- Table of Contents (visible on desktop) -->
+            <aside class="toc-container glassmorphism">
+                <div class="toc-header">
+                    <span class="material-symbols-rounded">menu_book</span>
+                    <h3>Contents</h3>
                 </div>
-            </div>
+                <nav class="toc-nav">
+                    <ul id="toc-list"></ul>
+                </nav>
+            </aside>
 
-            <div class="policy-section">
-                <h3>2. Data Collection</h3>
-                <div class="policy-content">
-                    <p>VaultX collects the following types of data:</p>
-                    <ul>
-                        <li>Files (images, videos, documents) that you explicitly choose to store in the app</li>
-                        <li>Device information for compatibility and optimization</li>
-                        <li>Biometric authentication data (only used locally on your device and never stored by us)</li>
-                    </ul>
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="policy-header glassmorphism">
+                    <div class="brand">
+                        <div class="logo">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="logo-path" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16 17H8C7.45 17 7 16.55 7 16V8C7 7.45 7.45 7 8 7H16C16.55 7 17 7.45 17 8V16C17 16.55 16.55 17 16 17Z"/>
+                                <circle class="logo-circle" cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h1>VaultX</h1>
+                    </div>
+                    <h2>Privacy Policy</h2>
+                    <p class="last-updated">Last Updated: May 16, 2025</p>
                 </div>
-            </div>
 
-            <div class="policy-section">
-                <h3>3. How We Use Your Data</h3>
-                <div class="policy-content">
-                    <p>We use your data solely for the following purposes:</p>
-                    <ul>
-                        <li>To store and display your files within the secure vault</li>
-                        <li>To manage folder organization based on your preferences</li>
-                        <li>To apply encryption to protect your files</li>
-                        <li>To enable biometric authentication for app access</li>
-                    </ul>
-                    <p>We do not use your data for advertising, analytics, or share it with third parties.</p>
+                <div class="mobile-toc glassmorphism">
+                    <div class="mobile-toc-header" id="mobile-toc-toggle">
+                        <span class="material-symbols-rounded">list</span>
+                        <span>View Contents</span>
+                        <span class="material-symbols-rounded">expand_more</span>
+                    </div>
+                    <div class="mobile-toc-content">
+                        <nav>
+                            <ul id="mobile-toc-list"></ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
 
-            <div class="policy-section">
-                <h3>4. Data Storage</h3>
-                <div class="policy-content">
-                    <p>All files are stored locally on your device. We use strong encryption (AES-256) to protect your files. The encryption keys are securely stored in your device's secure storage area.</p>
-                </div>
-            </div>
+                <!-- Policy Content -->
+                <section id="introduction" class="policy-section glassmorphism">
+                    <h3>1. Introduction</h3>
+                    <div class="policy-content">
+                        <p>VaultX is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your data when you use our application.</p>
+                    </div>
+                </section>
 
-            <div class="policy-section">
-                <h3>5. Permissions</h3>
-                <div class="policy-content">
-                    <p>VaultX requests the following permissions:</p>
-                    <ul>
-                        <li>Storage Access: To read/write files to your device</li>
-                        <li>Camera: To capture photos/videos directly into the app</li>
-                        <li>Biometric: To enable fingerprint/face unlock</li>
-                    </ul>
-                    <p>These permissions are only used for the core functionality of the app and not for any other purposes.</p>
-                </div>
-            </div>
+                <section id="data-collection" class="policy-section glassmorphism">
+                    <h3>2. Data Collection</h3>
+                    <div class="policy-content">
+                        <p>VaultX collects the following types of data:</p>
+                        <ul>
+                            <li>Files (images, videos, documents) that you explicitly choose to store in the app</li>
+                            <li>Device information for compatibility and optimization</li>
+                            <li>Biometric authentication data (only used locally on your device and never stored by us)</li>
+                        </ul>
+                    </div>
+                </section>
 
-            <div class="policy-section">
-                <h3>6. Data Deletion</h3>
-                <div class="policy-content">
-                    <p>You have complete control over your data:</p>
-                    <ul>
-                        <li>Files can be permanently deleted from the app at any time</li>
-                        <li>When you delete the app, all associated data is removed from your device</li>
-                        <li>We do not store any backups of your data on remote servers</li>
-                    </ul>
-                    <p>If you choose to delete original files after importing them to VaultX, the files are permanently removed from their original location but remain stored within the encrypted vault.</p>
-                </div>
-            </div>
+                <section id="data-usage" class="policy-section glassmorphism">
+                    <h3>3. How We Use Your Data</h3>
+                    <div class="policy-content">
+                        <p>We use your data solely for the following purposes:</p>
+                        <ul>
+                            <li>To store and display your files within the secure vault</li>
+                            <li>To manage folder organization based on your preferences</li>
+                            <li>To apply encryption to protect your files</li>
+                            <li>To enable biometric authentication for app access</li>
+                        </ul>
+                        <p>We do not use your data for advertising, analytics, or share it with third parties.</p>
+                    </div>
+                </section>
 
-            <div class="policy-section">
-                <h3>7. Data Security</h3>
-                <div class="policy-content">
-                    <p>We implement strong security measures to protect your data:</p>
-                    <ul>
-                        <li>AES-256 encryption for all stored files</li>
-                        <li>Biometric authentication integration</li>
-                        <li>Automatic screen lock when app is minimized</li>
-                        <li>No internet connectivity for file transfers (all data stays on your device)</li>
-                    </ul>
-                </div>
-            </div>
+                <section id="data-storage" class="policy-section glassmorphism">
+                    <h3>4. Data Storage</h3>
+                    <div class="policy-content">
+                        <p>All files are stored locally on your device. We use strong encryption (AES-256) to protect your files. The encryption keys are securely stored in your device's secure storage area.</p>
+                        <div class="info-chip">
+                            <span class="material-symbols-rounded">lock</span>
+                            <span>AES-256 Encryption</span>
+                        </div>
+                    </div>
+                </section>
 
-            <div class="policy-section">
-                <h3>8. Third-Party Services</h3>
-                <div class="policy-content">
-                    <p>VaultX does not use any third-party services that access your stored data. All processing is done locally on your device.</p>
-                </div>
-            </div>
+                <section id="permissions" class="policy-section glassmorphism">
+                    <h3>5. Permissions</h3>
+                    <div class="policy-content">
+                        <p>VaultX requests the following permissions:</p>
+                        <div class="permission-grid">
+                            <div class="permission-item">
+                                <span class="material-symbols-rounded">sd_storage</span>
+                                <h4>Storage Access</h4>
+                                <p>To read/write files to your device</p>
+                            </div>
+                            <div class="permission-item">
+                                <span class="material-symbols-rounded">photo_camera</span>
+                                <h4>Camera</h4>
+                                <p>To capture photos/videos directly into the app</p>
+                            </div>
+                            <div class="permission-item">
+                                <span class="material-symbols-rounded">fingerprint</span>
+                                <h4>Biometric</h4>
+                                <p>To enable fingerprint/face unlock</p>
+                            </div>
+                        </div>
+                        <p>These permissions are only used for the core functionality of the app and not for any other purposes.</p>
+                    </div>
+                </section>
 
-            <div class="policy-section">
-                <h3>9. Children's Privacy</h3>
-                <div class="policy-content">
-                    <p>Our app is not intended for children under 13 years of age, and we do not knowingly collect personal information from children under 13.</p>
-                </div>
-            </div>
+                <section id="data-deletion" class="policy-section glassmorphism">
+                    <h3>6. Data Deletion</h3>
+                    <div class="policy-content">
+                        <p>You have complete control over your data:</p>
+                        <ul>
+                            <li>Files can be permanently deleted from the app at any time</li>
+                            <li>When you delete the app, all associated data is removed from your device</li>
+                            <li>We do not store any backups of your data on remote servers</li>
+                        </ul>
+                        <p>If you choose to delete original files after importing them to VaultX, the files are permanently removed from their original location but remain stored within the encrypted vault.</p>
+                    </div>
+                </section>
 
-            <div class="policy-section">
-                <h3>10. Changes to Privacy Policy</h3>
-                <div class="policy-content">
-                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
-                </div>
-            </div>
+                <section id="data-security" class="policy-section glassmorphism">
+                    <h3>7. Data Security</h3>
+                    <div class="policy-content">
+                        <p>We implement strong security measures to protect your data:</p>
+                        <div class="security-features">
+                            <div class="security-feature">
+                                <div class="security-icon">
+                                    <span class="material-symbols-rounded">enhanced_encryption</span>
+                                </div>
+                                <div class="security-details">
+                                    <h4>AES-256 encryption</h4>
+                                    <p>Military-grade encryption for all stored files</p>
+                                </div>
+                            </div>
+                            <div class="security-feature">
+                                <div class="security-icon">
+                                    <span class="material-symbols-rounded">fingerprint</span>
+                                </div>
+                                <div class="security-details">
+                                    <h4>Biometric authentication</h4>
+                                    <p>Secure access using your device's biometric features</p>
+                                </div>
+                            </div>
+                            <div class="security-feature">
+                                <div class="security-icon">
+                                    <span class="material-symbols-rounded">screen_lock_portrait</span>
+                                </div>
+                                <div class="security-details">
+                                    <h4>Auto screen lock</h4>
+                                    <p>Automatic locking when app is minimized</p>
+                                </div>
+                            </div>
+                            <div class="security-feature">
+                                <div class="security-icon">
+                                    <span class="material-symbols-rounded">lan_disconnect</span>
+                                </div>
+                                <div class="security-details">
+                                    <h4>No internet connectivity</h4>
+                                    <p>For file transfers (all data stays on your device)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-            <div class="policy-section">
-                <h3>11. Contact Us</h3>
-                <div class="policy-content">
-                    <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-                    <p>Email: <a href="mailto:privacy@vaultxapp.com">privacy@vaultxapp.com</a></p>
-                </div>
-            </div>
-        </main>
+                <section id="third-party" class="policy-section glassmorphism">
+                    <h3>8. Third-Party Services</h3>
+                    <div class="policy-content">
+                        <p>VaultX does not use any third-party services that access your stored data. All processing is done locally on your device.</p>
+                    </div>
+                </section>
 
-        <footer>
+                <section id="childrens-privacy" class="policy-section glassmorphism">
+                    <h3>9. Children's Privacy</h3>
+                    <div class="policy-content">
+                        <p>Our app is not intended for children under 13 years of age, and we do not knowingly collect personal information from children under 13.</p>
+                    </div>
+                </section>
+
+                <section id="changes" class="policy-section glassmorphism">
+                    <h3>10. Changes to Privacy Policy</h3>
+                    <div class="policy-content">
+                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                    </div>
+                </section>
+
+                <section id="contact" class="policy-section glassmorphism">
+                    <h3>11. Contact Us</h3>
+                    <div class="policy-content">
+                        <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+                        <div class="contact-card">
+                            <div class="contact-item">
+                                <span class="material-symbols-rounded">mail</span>
+                                <a href="mailto:yaseennawab32@gmail.com">privacy@vaultxapp.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="glassmorphism">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z" fill="url(#paint0_linear)"/>
-                        <defs>
-                            <linearGradient id="paint0_linear" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#2196F3"/>
-                                <stop offset="1" stop-color="#1565C0"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <span>VaultX</span>
+                <div class="footer-branding">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="logo-path" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16 17H8C7.45 17 7 16.55 7 16V8C7 7.45 7.45 7 8 7H16C16.55 7 17 7.45 17 8V16C17 16.55 16.55 17 16 17Z"/>
+                            <circle class="logo-circle" cx="12" cy="12" r="1"/>
+                        </svg>
+                        <span>VaultX</span>
+                    </div>
+                    <p>Securing your digital life</p>
                 </div>
-                <p>&copy; 2025 VaultX. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/YASEEN-nawab/vaultX">
+                        <span class="material-symbols-rounded">code</span>
+                        GitHub
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-rounded">gavel</span>
+                        Terms
+                    </a>
+                    <a href="#" class="active">
+                        <span class="material-symbols-rounded">shield</span>
+                        Privacy
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 VaultX. All rights reserved.</p>
+            </div>
+            <div class="scroll-to-top" id="scroll-to-top">
+                <span class="material-symbols-rounded">arrow_upward</span>
             </div>
         </footer>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav">
+            <button class="mobile-nav-btn" id="nav-toc">
+                <span class="material-symbols-rounded">list</span>
+                <span class="mobile-nav-label">Contents</span>
+            </button>
+            <button class="mobile-nav-btn" id="nav-theme">
+                <span class="material-symbols-rounded">dark_mode</span>
+                <span class="mobile-nav-label">Theme</span>
+            </button>
+            <button class="mobile-nav-btn" id="nav-top">
+                <span class="material-symbols-rounded">arrow_upward</span>
+                <span class="mobile-nav-label">Top</span>
+            </button>
+        </div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
