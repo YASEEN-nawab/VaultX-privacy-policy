@@ -5,141 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VaultX - Privacy Policy</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Dark Mode</em>
+    </div>
+
     <header>
-        <div class="container">
-            <h1>VaultX</h1>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM27.5 28.75H12.5C11.81 28.75 11.25 28.19 11.25 27.5V12.5C11.25 11.81 11.81 11.25 12.5 11.25H27.5C28.19 11.25 28.75 11.81 28.75 12.5V27.5C28.75 28.19 28.19 28.75 27.5 28.75Z" fill="url(#paint0_linear)"/>
+                        <path d="M20 17.5C18.62 17.5 17.5 18.62 17.5 20C17.5 21.38 18.62 22.5 20 22.5C21.38 22.5 22.5 21.38 22.5 20C22.5 18.62 21.38 17.5 20 17.5Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#2196F3"/>
+                                <stop offset="1" stop-color="#1565C0"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1>VaultX</h1>
+            </div>
             <p class="tagline">Your Secure Digital Vault</p>
         </div>
     </header>
 
-    <main class="container">
-        <div class="policy-container">
-            <h2>Privacy Policy</h2>
-            <p class="last-updated">Last Updated: May 16, 2025</p>
+    <main>
+        <div class="container">
+            <div class="card policy-header">
+                <h2>Privacy Policy</h2>
+                <p class="last-updated">Last Updated: May 16, 2025</p>
+            </div>
 
-            <section>
+            <div class="card policy-intro">
                 <p>
                     Welcome to VaultX. We respect your privacy and are committed to protecting your personal data.
                     This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.
                 </p>
-            </section>
+            </div>
 
-            <section>
-                <h3>1. Information We Collect</h3>
-                <h4>Personal Information</h4>
-                <p>
-                    We may collect personal information that you provide directly to us, such as:
-                </p>
-                <ul>
-                    <li>Account information (email address, name, username)</li>
-                    <li>User-generated content stored within the app</li>
-                    <li>Preferences and settings</li>
-                </ul>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">Information We Collect</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="sub-section">
+                            <h4>Personal Information</h4>
+                            <p>
+                                We may collect personal information that you provide directly to us, such as:
+                            </p>
+                            <ul>
+                                <li>Account information (email address, name, username)</li>
+                                <li>User-generated content stored within the app</li>
+                                <li>Preferences and settings</li>
+                            </ul>
+                        </div>
 
-                <h4>Automatically Collected Information</h4>
-                <p>
-                    When you use our app, we may automatically collect certain information, including:
-                </p>
-                <ul>
-                    <li>Device information (operating system, device model, unique device identifiers)</li>
-                    <li>Log data (app usage, crash reports, performance data)</li>
-                    <li>Usage patterns and preferences</li>
-                </ul>
-            </section>
+                        <div class="sub-section">
+                            <h4>Automatically Collected Information</h4>
+                            <p>
+                                When you use our app, we may automatically collect certain information, including:
+                            </p>
+                            <ul>
+                                <li>Device information (operating system, device model, unique device identifiers)</li>
+                                <li>Log data (app usage, crash reports, performance data)</li>
+                                <li>Usage patterns and preferences</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <section>
-                <h3>2. How We Use Your Information</h3>
-                <p>
-                    We use the information we collect for various purposes, including:
-                </p>
-                <ul>
-                    <li>Providing, maintaining, and improving our services</li>
-                    <li>Processing and fulfilling your requests</li>
-                    <li>Sending you technical notices and support messages</li>
-                    <li>Detecting and preventing fraudulent activity and security incidents</li>
-                    <li>Analyzing usage patterns to enhance user experience</li>
-                </ul>
-            </section>
+                <div class="accordion-item">
+                    <button id="accordion-button-2" aria-expanded="false">
+                        <span class="accordion-title">How We Use Your Information</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We use the information we collect for various purposes, including:
+                        </p>
+                        <ul>
+                            <li>Providing, maintaining, and improving our services</li>
+                            <li>Processing and fulfilling your requests</li>
+                            <li>Sending you technical notices and support messages</li>
+                            <li>Detecting and preventing fraudulent activity and security incidents</li>
+                            <li>Analyzing usage patterns to enhance user experience</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <section>
-                <h3>3. Data Security</h3>
-                <p>
-                    We implement appropriate technical and organizational measures to protect the security of your personal information.
-                    However, please be aware that no method of transmission over the internet or electronic storage is 100% secure,
-                    and we cannot guarantee absolute security.
-                </p>
-            </section>
+                <div class="accordion-item">
+                    <button id="accordion-button-3" aria-expanded="false">
+                        <span class="accordion-title">Data Security</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We implement appropriate technical and organizational measures to protect the security of your personal information.
+                            However, please be aware that no method of transmission over the internet or electronic storage is 100% secure,
+                            and we cannot guarantee absolute security.
+                        </p>
+                        <div class="security-highlight">
+                            <div class="security-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <p>
+                                Your security is our priority. We use industry-standard encryption and security practices to protect your data.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-            <section>
-                <h3>4. Data Sharing and Disclosure</h3>
-                <p>
-                    We do not sell your personal information. We may share your information in the following circumstances:
-                </p>
-                <ul>
-                    <li>With service providers who perform services on our behalf</li>
-                    <li>To comply with legal obligations</li>
-                    <li>To protect our rights, privacy, safety, or property</li>
-                    <li>In connection with a business transfer or transaction</li>
-                </ul>
-            </section>
+                <div class="accordion-item">
+                    <button id="accordion-button-4" aria-expanded="false">
+                        <span class="accordion-title">Data Sharing and Disclosure</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We do not sell your personal information. We may share your information in the following circumstances:
+                        </p>
+                        <ul>
+                            <li>With service providers who perform services on our behalf</li>
+                            <li>To comply with legal obligations</li>
+                            <li>To protect our rights, privacy, safety, or property</li>
+                            <li>In connection with a business transfer or transaction</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <section>
-                <h3>5. Your Rights and Choices</h3>
-                <p>
-                    Depending on your location, you may have certain rights regarding your personal information, including:
-                </p>
-                <ul>
-                    <li>Accessing, correcting, or deleting your personal information</li>
-                    <li>Withdrawing your consent</li>
-                    <li>Opting out of certain data collection or uses</li>
-                    <li>Data portability</li>
-                </ul>
-                <p>
-                    To exercise these rights, please contact us using the information provided in the Contact Us section.
-                </p>
-            </section>
+                <div class="accordion-item">
+                    <button id="accordion-button-5" aria-expanded="false">
+                        <span class="accordion-title">Your Rights and Choices</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Depending on your location, you may have certain rights regarding your personal information, including:
+                        </p>
+                        <ul>
+                            <li>Accessing, correcting, or deleting your personal information</li>
+                            <li>Withdrawing your consent</li>
+                            <li>Opting out of certain data collection or uses</li>
+                            <li>Data portability</li>
+                        </ul>
+                        <p>
+                            To exercise these rights, please contact us using the information provided in the Contact Us section.
+                        </p>
+                    </div>
+                </div>
 
-            <section>
-                <h3>6. Children's Privacy</h3>
-                <p>
-                    Our services are not intended for children under the age of 13. We do not knowingly collect personal information
-                    from children under 13. If you are a parent or guardian and believe we may have collected information about a child,
-                    please contact us immediately.
-                </p>
-            </section>
+                <div class="accordion-item">
+                    <button id="accordion-button-6" aria-expanded="false">
+                        <span class="accordion-title">Children's Privacy</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Our services are not intended for children under the age of 13. We do not knowingly collect personal information
+                            from children under 13. If you are a parent or guardian and believe we may have collected information about a child,
+                            please contact us immediately.
+                        </p>
+                    </div>
+                </div>
 
-            <section>
-                <h3>7. Changes to This Privacy Policy</h3>
-                <p>
-                    We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy
-                    on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
-                </p>
-            </section>
+                <div class="accordion-item">
+                    <button id="accordion-button-7" aria-expanded="false">
+                        <span class="accordion-title">Changes to This Privacy Policy</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy
+                            on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
+                        </p>
+                    </div>
+                </div>
 
-            <section>
-                <h3>8. Contact Us</h3>
-                <p>
-                    If you have any questions about this Privacy Policy, please contact us at:
-                </p>
-                <p class="contact-info">
-                    Email: <a href="mailto:contact@vaultx.app">contact@vaultx.app</a><br>
-                    Address: [Your Address]
-                </p>
-            </section>
+                <div class="accordion-item">
+                    <button id="accordion-button-8" aria-expanded="false">
+                        <span class="accordion-title">Contact Us</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            If you have any questions about this Privacy Policy, please contact us at:
+                        </p>
+                        <div class="contact-card">
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                                <a href="mailto:contact@vaultx.app">contact@vaultx.app</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                <span>[Your Address]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">VaultX</div>
+                <div class="footer-brand">
+                    <div class="footer-logo">VaultX</div>
+                    <p class="footer-tagline">Securing your digital life</p>
+                </div>
                 <div class="footer-links">
-                    <a href="https://github.com/YASEEN-nawab/vaultX">GitHub</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="https://github.com/YASEEN-nawab/vaultX" class="footer-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-file-contract"></i> Terms of Service
+                    </a>
+                    <a href="#" class="footer-link active">
+                        <i class="fas fa-shield-alt"></i> Privacy Policy
+                    </a>
                 </div>
             </div>
             <div class="copyright">
@@ -147,5 +243,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
